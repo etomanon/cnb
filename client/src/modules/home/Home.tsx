@@ -43,7 +43,11 @@ export const Home: React.FC = () => {
         <Header>Currency Converter</Header>
         <HomeForm onSubmit={onSubmit} rates={data.rates} />
         {formData && formData.amount && formData.rate && (
-          <SubHeader>{`${formData.amount} CZK = ${converted} ${formData.rate.label}`}</SubHeader>
+          <>
+            <SubHeader mt={4}>{`${formData.amount} CZK`}</SubHeader>
+            <SubHeader>=</SubHeader>
+            <SubHeader>{`${converted} ${formData.rate.label}`}</SubHeader>
+          </>
         )}
       </Flex>
     </>

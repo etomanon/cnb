@@ -19,7 +19,7 @@ router.get("/", async (req, res, next) => {
       if (info.length > 4)
         return {
           // currency code
-          label: `${info[0]} (${info[1]} - ${info[3]})`,
+          label: `${info[3]} (${info[1]} - ${info[0]})`,
           // exchange rate to CZK
           value: parseFloat(info[4].replace(",", "."))
         };

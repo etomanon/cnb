@@ -23,8 +23,10 @@ export const Header = styled.h1`
   text-align: center;
 `;
 
-export const SubHeader = styled.h2`
+export const SubHeader = styled.h2<SpaceProps>`
   color: ${({ theme }) => theme.colors.primary};
   font-size: 2rem;
+  margin: 1rem 0 0 0;
   text-align: center;
+  ${space}
 `;
