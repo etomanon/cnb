@@ -8,13 +8,15 @@ interface InputProps {
   type: "number";
   placeholder: string;
   label: string;
+  step?: number;
 }
 
 export const Input: React.FC<InputProps & FieldProps> = ({
   field: { name, onChange, onBlur },
   type,
   placeholder,
-  label
+  label,
+  step
 }) => {
   return (
     <>
@@ -25,6 +27,7 @@ export const Input: React.FC<InputProps & FieldProps> = ({
         placeholder={placeholder}
         onChange={onChange}
         onBlur={onBlur}
+        step={step}
       />
       <ErrorMsg name={name} />
     </>
