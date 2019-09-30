@@ -15,3 +15,16 @@ export const Text = styled.div<ColorProps & SpaceProps & DisplayProps>`
   ${color};
   ${space};
 `;
+
+export const Header = styled.h1`
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+`;
+
+export const SubHeader = styled.h2`
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: 2rem;
+  text-align: center;
+`;
