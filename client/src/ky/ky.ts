@@ -4,4 +4,4 @@ const ky = kyDefault.extend({
   prefixUrl: "/api"
 });
 
-export default ky
+export default ky;

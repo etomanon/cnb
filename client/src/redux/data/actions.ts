@@ -13,8 +13,7 @@ const dataRequest = async (): Promise<any | null> => {
   try {
     const data = await ky("data").json();
     return data;
-  }
-  catch (error) {
+  } catch (error) {
     return null;
   }
 };
