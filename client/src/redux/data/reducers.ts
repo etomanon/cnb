@@ -1,12 +1,13 @@
 import { ActionType, getType } from "typesafe-actions";
 import { Reducer } from "redux";
 
+import { Option } from "../../types/option";
 import { pending, rejected, StateCommon } from "../utils/common";
 
 import * as actions from "./actions";
 
 export interface DataState extends StateCommon {
-  rates: any[];
+  rates: Option[];
 }
 
 export const initialData: DataState = {

@@ -1,17 +1,19 @@
 import { createAsyncAction } from "typesafe-actions";
 import { Dispatch } from "redux";
 
+import { Option } from "../../types/option";
+
 import ky from "../../ky/ky";
 
 export const dataGetAsync = createAsyncAction(
   "DATA_GET_REQUEST",
   "DATA_GET_SUCCESS",
   "DATA_GET_FAILURE"
-)<void, any, void>();
+)<void, Option[], void>();
 
-const dataRequest = async (): Promise<any | null> => {
+const dataRequest = async (): Promise<Option[] | null> => {
   try {
-    const data = await ky("data").json();
+    const data = await ky("data").json<Option[]>();
     return data;
   } catch (error) {
     return null;
